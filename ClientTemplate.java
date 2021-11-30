@@ -4,12 +4,12 @@ import java.io.*;
 import java.text.NumberFormat;
 
 /** ***************************************************
- *  Name:           Sveinson
+ *  Name:           Hiebert
  *  Class:          CS30S
  * 
- *  Assignment:     Ax Qy
+ *  Assignment:     Lab 1.5
  * 
- *  Description:    Place a short description of your program here
+ *  Description:    this is the driver code for programinfo class
  * 
  *************************************************************/
 
@@ -34,6 +34,8 @@ public class ClientTemplate {
     
     // ***** objects *****
     
+        ProgramInfo programInfo = new ProgramInfo("A1Q2");
+    
         //Scanner scanner = new Scanner(System.in);
         //NumberFormat currency = NumberFormat.getCurrencyInstance();
         
@@ -44,8 +46,7 @@ public class ClientTemplate {
     
     // ***** print banners *****
     
-        ProgramInfo myBanner = new ProgramInfo("Hiebert", "CS30S", "Lab 1.1");
-        myBanner.printBanner();
+        System.out.println(programInfo.getBanner());
         //fout.print(banner);
     
     // ***** Get Input *****
@@ -55,23 +56,13 @@ public class ClientTemplate {
         // echo input back to console window
     
     // ***** Main Processing *****
-        System.out.println(myBanner.getName());
-        System.out.println(myBanner.getClassName());
-        System.out.println(myBanner.getAssignment());
-        
-        myBanner.setName("Bob");
-        myBanner.setClassName("CS40S");
-        myBanner.setAssignment("Banana Lab 101.4");
-        
-        System.out.println(myBanner.getBanner());
-        System.out.println(myBanner.getClosingMsg());
         
     // ***** Print Formatted Output *****
     
     // ***** Closing Message *****
     
         System.out.println();
-        myBanner.printClosingMsg();
+        System.out.println(programInfo.getClosingMsg());
         //fout.println("End of Processing");
         
     // **** close io buffers *****
